@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Pocket Archery</title>
+  <script type="module" crossorigin src="./assets/index-m_mjNrRN.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-cZrXY_MW.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene"></canvas>
+
+    <!-- HUD -->
+    <div id="hud">
+      <div class="pill">End<b id="hEnd">1/3</b></div>
+      <div class="pill">Arrow<b id="hArrow">1/6</b></div>
+      <div class="pill">Dist<b id="hDist">18 m</b></div>
+      <div class="pill">Last<b id="hLast">—</b></div>
+      <div class="pill gold">End score<b id="hScore">0</b></div>
+    </div>
+
+    <div id="wind"><span id="windArrow">↑</span> <span id="windMph">0</span></div>
+
+    <!-- score call-out -->
+    <div id="callout"></div>
+
+    <!-- scope inset frame (the magnified sight window) -->
+    <div id="scopeframe" class="hidden"></div>
+
+    <!-- sight reticle (follows aim, lives inside the scope) -->
+    <div id="sight" class="hidden"><div id="sightRing"></div></div>
+
+    <!-- draw meter -->
+    <div id="meters" class="hidden">
+      <div id="drawWrap"><div id="drawFill"></div><div id="drawFull"></div></div>
+      <div id="drawLbl">DRAW</div>
+    </div>
+
+    <!-- controls -->
+    <div id="controls">
+      <div id="nudge" class="hidden">
+        <button class="nub" data-d="l">◀</button>
+        <div class="nubcol">
+          <button class="nub" data-d="u">▲</button>
+          <button class="nub" data-d="d">▼</button>
+        </div>
+        <button class="nub" data-d="r">▶</button>
+      </div>
+      <div class="row">
+        <button id="btnDraw" class="btn">Hold to draw</button>
+        <button id="btnRange" class="btn sec">Indoor</button>
+        <button id="btnNext" class="btn sec hidden">Next</button>
+      </div>
+      <div id="msg">Loading…</div>
+    </div>
+  </div>
+</body>
+</html>
